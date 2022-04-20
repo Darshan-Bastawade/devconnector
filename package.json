@@ -4,16 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Darshan Bastawade",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",
+    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "gravatar": "^1.8.2",
@@ -25,10 +28,6 @@
     "nprogress": "^0.2.0",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-stripe-checkout": "^2.6.3",
-    "semantic-ui-react": "^2.1.2",
     "shortid": "^2.2.16",
     "validator": "^13.7.0"
   },
